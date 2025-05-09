@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音楽プレーヤー</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script type="module" src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body id="body">
+    <header id="header">
+      <h1>Let's Make A Originality!</h1>
+    </header>
+
+    <main>
+      <div class="main-wrap" id="main-wrap">
+        <div class="disk-wrap" id="disc-wrap">
+          <img
+            src="https://imagenavi.jp/download/resource/preview.asp?id=31115207&size=700"
+            alt="disc image"
+          />
+        </div>
+
+        <div id="button-wrap">
+          <button><i class="fa-solid fa-shuffle"></i></button>
+          <button><i class="fa-solid fa-backward"></i></button>
+          <button id="play" class="play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button id="pause" class="pause">
+            <i class="fa-solid fa-pause"></i>
+          </button>
+          <button><i class="fa-solid fa-forward"></i></button>
+          <button id="toggle"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+
+        <div class="text-wrap">
+          <h2 class="your-name">name</h2>
+        </div>
+
+        <div class="visualizer-wrap" id="visualizer-wrap">
+          <canvas id="visualizer" width="380" height="200"></canvas>
+          <audio id="audio">
+            <source src="./sample.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <small>Copyright &copy;2025 Web Design</small>
+    </footer>
+
+    <!-- 🔽 モジュールとして読み込み -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

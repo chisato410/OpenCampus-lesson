@@ -1,4 +1,4 @@
-import { drawCircleWave } from "./circleVisualizer.js";
+// ⭐️いっしょに記述しましょう！
 
 const audio = document.getElementById("audio");
 const playBtn = document.getElementById("play");

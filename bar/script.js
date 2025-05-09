@@ -1,5 +1,4 @@
 import { drawBars } from "./barVisualizer.js";
-// import { drawCircleWave } from './circleVisualizer.js'; ← 不要なら削除
 
 const audio = document.getElementById("audio");
 const playBtn = document.getElementById("play");

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OC-text</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./prism/prism.css" />
+    <script src="./prism/prism.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>OC 授業資料</h1>
+      <p>
+        今回のオープンキャンパスでは、プレイリストの画面を作っていこうと思います💓✨
+      </p>
+      <p>デザインとプログラミング両方体験していきますよ(^^♪</p>
+    </header>
+
+    <main>
+      <!-- サイドバー -->
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#music">音楽生成🎶</a></li>
+          <li><a href="#design">デザイン🌸</a></li>
+          <li><a href="#programming">プログラミング💻</a></li>
+          <li><a href="#visualizer">visualizer.js</a></li>
+          <li><a href="#script">script.js</a></li>
+          <li><a href="#style">style.css</a></li>
+          <li><a href="#school">学校の様子✨</a></li>
+        </ul>
+      </nav>
+
+      <!-- 各セクション -->
+      <section id="music">
+        <h2>音楽生成🎶</h2>
+        <p>AIを使用し、実際にプレイリストに流す音楽を生成していただきます!!</p>
+        <a href="https://suno.com/" class="btn">音楽を生成する</a>
+      </section>
+
+      <section id="design">
+        <h2>デザイン🌸</h2>
+        <p>
+          デザインではcanvaというサイトを使って、AIで画像を生成し、その画像を使用してジャケット画像を作成します。
+        </p>
+        <p>先ほど生成した音楽から連想してみましょう～！</p>
+        <a href="https://www.canva.com/ja_jp/ai-image-generator/" class="btn"
+          >canvaへ</a
+        >
+      </section>
+
+      <section id="programming">
+        <h2>プログラミング💻</h2>
+        <p>
+          プログラミングでは、実際に音楽が流れるようにコードを組んでいきましょう！
+        </p>
+        <p>
+          まずは、googleドライブからcreateファイルをダウンロードしてください。
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1-Vuq_5v_m8__mUhup5i1j4BADChkYb8w?usp=sharing"
+          class="btn"
+          >googleドライブへ</a
+        >
+
+        <a href="https://github.com/chisato410/OC-Sver/tree/main" class="btn"
+          >完成形のコードはこちら。</a
+        >
+
+        <p>完成形の画面はこちら。</p>
+        <div class="complete">
+          <a href="https://410hz.vivian.jp/OCSver/bar/index.html" class="btn"
+            >棒グラフ型</a
+          >
+          <a href="https://410hz.vivian.jp/OCSver/circle/index.html" class="btn"
+            >丸型</a
+          >
+        </div>
+      </section>
+
+      <section class="index">
+        <h3>index.htmlを見てみよう!</h3>
+
+        <div>
+          <h4>雛形を見てみよう</h4>
+          <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;!-- 画面サイズに合わせてデザインを自動調整 --&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;音楽プレーヤー&lt;/title&gt;
+&lt;!-- CSSリセット（ブラウザの違いをなくすため） --&gt;
+&lt;link
+  rel=&quot;stylesheet&quot;
+  href=&quot;https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css&quot;
+/&gt;
+&lt;!-- アイコンフォント（再生マークなど） --&gt;
+&lt;link
+  rel=&quot;stylesheet&quot;
+  href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css&quot;
+/&gt;
+&lt;!-- JavaScriptファイルを読み込む（モジュール形式） --&gt;
+&lt;script type=&quot;module&quot; src=&quot;./script.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 自分のCSSを読み込む --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+        </div>
+
+        <div>
+          <h4>headerをみよう</h4>
+          <pre><code class="language-markup">&lt;header id=&quot;header&quot;&gt;
+&lt;!-- サイトの見出し --&gt;
+&lt;h1&gt;Let's Make A Originality!&lt;/h1&gt;
+&lt;/header&gt;
+</code></pre>
+        </div>
+
+        <div>
+          <h4>mainの中を見てみましょう</h4>
+          <pre><code class="language-markup">&lt;!-- 音楽ディスクの画像 --&gt;
+&lt;div class=&quot;disk-wrap&quot; id=&quot;disc-wrap&quot;&gt;
+&lt;img
+src=&quot;https://imagenavi.jp/download/resource/preview.asp?id=31115207&amp;size=700&quot;
+alt=&quot;disc image&quot;
+/&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <div>
+          <h4>音楽プレイヤー部分を見てみましょう</h4>
+          <pre><code class="language-markup">&lt;!-- 音楽プレーヤーの操作ボタン --&gt;
+&lt;div id=&quot;button-wrap&quot;&gt;
+&lt;button&gt;&lt;i class=&quot;fa-solid fa-shuffle&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;!-- シャッフル --&gt;
+&lt;button&gt;&lt;i class=&quot;fa-solid fa-backward&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;!-- 前の曲 --&gt;
+&lt;button id=&quot;play&quot; class=&quot;play&quot;&gt;
+&lt;i class=&quot;fa-solid fa-play&quot;&gt;&lt;/i&gt;
+&lt;!-- 再生 --&gt;
+&lt;/button&gt;
+&lt;button id=&quot;pause&quot; class=&quot;pause&quot;&gt;
+&lt;i class=&quot;fa-solid fa-pause&quot;&gt;&lt;/i&gt;
+&lt;!-- 一時停止 --&gt;
+&lt;/button&gt;
+&lt;button&gt;&lt;i class=&quot;fa-solid fa-forward&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;!-- 次の曲 --&gt;
+&lt;button id=&quot;toggle&quot;&gt;&lt;i class=&quot;fa-solid fa-repeat&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;!-- ループ切替（今は未使用） --&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <div>
+          <h4>nameの部分</h4>
+          <pre><code class="language-markup">&lt;!-- 名前やアーティスト名など --&gt;
+&lt;div class=&quot;text-wrap&quot;&gt;
+&lt;h2 class=&quot;your-name&quot;&gt;name&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <div>
+          <h4>オーディオビジュアライザー部分</h4>
+          <pre><code class="language-markup">&lt;!-- オーディオビジュアライザー（音に合わせて動くアニメーション） --&gt;
+&lt;div class=&quot;visualizer-wrap&quot; id=&quot;visualizer-wrap&quot;&gt;
+&lt;canvas id=&quot;visualizer&quot; width=&quot;380&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+&lt;!-- アニメーションを描く場所 --&gt;
+&lt;audio id=&quot;audio&quot;&gt;
+&lt;!-- 音楽ファイル（.mp3など） --&gt;
+&lt;source src=&quot;./sample.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+&lt;/audio&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <div>
+          <h4>footerを見てみましょう。</h4>
+          <pre><code class="language-markup">&lt;footer&gt;
+&lt;!-- コピーライト（著作権） --&gt;
+&lt;small&gt;Copyright &amp;copy;2025 Web Design&lt;/small&gt;
+&lt;/footer&gt;
+</code></pre>
+        </div>
+      </section>
+
+      <section id="visualizer">
+        <h2>visualizer.jsを書いてみよう！</h2>
+        <p>
+          今回は、丸型ビジュアライザーか棒グラフビジュアライザーをつくってもらいます。
+        </p>
+
+        <div>
+          <h3>丸型ビジュアライザー</h3>
+          <pre><code class="language-js">// 🔽 円形の波形（オーディオビジュアライザー）を描く関数
+  export function drawCircleWave(
+    ctx, // キャンバスに描くための道具（えんぴつ）
+    canvas, // キャンバス（絵を描く場所）
+    dataArray, // 音の強さを数字で並べた配列（Web Audio APIで取得）
+    bufferLength, // dataArrayの長さ（音のデータの数）
+    circleColor // 線の色（好きな色にできる）
+  ) {
+    // 🔸 円の中心位置を計算（キャンバスの真ん中）
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    // 🔸 円の基本サイズ（半径）
+    const baseRadius = 100;
+
+    // 🔸 音の強さをどれくらい大きく見せるか（2倍）
+    const waveScale = 2.0;
+
+    // 🔸 パス（線）を描き始める準備
+    ctx.beginPath();
+
+    // 🔸 音のデータの数だけぐるっと1周する
+    for (let i = 0; i < bufferLength; i++) {
+      // 🔸 角度を計算（0〜360度をデータの数で割る）
+      const angle = (i / bufferLength) * Math.PI * 2;
+
+      // 🔸 音の強さを拡大して値を決める
+      const value = dataArray[i] * waveScale;
+
+      // 🔸 基本の円の半径に音の強さを加える（動く波のように）
+      const radius = baseRadius + value;
+
+      // 🔸 三角関数を使って円周上の位置を計算
+      const x = centerX + Math.cos(angle) * radius;
+      const y = centerY + Math.sin(angle) * radius;
+
+      // 🔸 最初の点は moveTo、それ以降は線でつなぐ
+      if (i === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+    }
+
+    // 🔸 円を閉じて（ぐるっと一周）から描く
+    ctx.closePath();
+    ctx.strokeStyle = circleColor; // 線の色
+    ctx.lineWidth = 2; // 線の太さ
+    ctx.stroke(); // 実際に線を描く
+  }
+  </code></pre>
+        </div>
+
+        <div>
+          <h3>棒グラフビジュアライザー</h3>
+          <pre><code class="language-js">// 🔽 棒グラフ型ビジュアライザーを描く関数
+    export function drawBars(ctx, canvas, dataArray, bufferLength, barColor) {
+      // 🔸 1本のバーの横幅を計算する
+      const barWidth = canvas.width / bufferLength;
+
+      // 🔸 横方向のスタート位置（左端）を 0 にする
+      let x = 0;
+
+      // 🔸 音の周波数データの数だけループする
+      for (let i = 0; i &lt; bufferLength; i++) {
+        // 🔸 音の大きさに合わせてバーの高さを決める（見やすいように 2.5倍）
+        const barHeight = dataArray[i] * 2.5;
+
+        // 🔸 バーの色を指定（好きな色にカスタマイズできる）
+        ctx.fillStyle = barColor;
+
+        // 🔸 実際にバーを描く
+        // ctx.fillRect(x, y, width, height)
+        // x : 横位置（左から）
+        // y : 縦位置（下から上に描くため canvas.height - barHeight）
+        // width : 横幅
+        // height : 高さ
+        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+        // 🔸 次のバーの位置に進める（バーとバーの間に1pxのすき間）
+        x += barWidth + 1;
+      }
+    }
+    </code></pre>
+        </div>
+      </section>
+
+      <section id="script">
+        <h2>script.jsを見て、触ってみましょう！</h2>
+        <p>script.js の一行目に書きましょう。</p>
+
+        <div>
+          <pre><code class="language-js">// 丸型の場合
+// ⭐️いっしょに記述しましょう！
+import { drawCircleWave } from &quot;./visualizer.js&quot;;
+// 棒グラフの場合
+// ⭐️いっしょに記述しましょう！
+import { drawBars } from &quot;./visualizer.js&quot;;
+            </code></pre>
+        </div>
+      </section>
+
+      <section id="style">
+        <h2>style.css</h2>
+        <p>ここでは style.css のスタイルについて説明します。</p>
+
+        <div>
+          <pre><code class="language-css">/* ⭐️背景色（変更可能） */
+body {
+  background-color: #fff;
+}
+
+/*⭐️音楽プレイヤー　色等　（変更可能） */
+.main-wrap {
+  border: #000 1px solid;
+}
+
+/*⭐️btn （変更可能） */
+.play {
+  border: 1px #000 solid;
+}
+
+.pause {
+  border: 1px #000 solid;
+}
+            </code></pre>
+        </div>
+      </section>
+      <section id="school">
+        <h2>最後に学校の様子をご紹介✨</h2>
+        <p>ここでは学校の様子が入ります。</p>
+        <video controls width="640" height="360">
+          <source src="mov.mp4" type="video/mp4" />
+          <source src="mov.mp4" type="video/webm" />
+          お使いのブラウザは video タグに対応していません。
+        </video>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 OC 授業資料</p>
+      <p>この資料はオープンキャンパスのために作成されました。</p>
+    </footer>
+  </body>
+</html>
